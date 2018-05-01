@@ -1,14 +1,18 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+<ion-navbar>
+
+<ion-title>Magic 8 Ball</ion-title>
+
+</ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class = "bg-image">
+    <ion-title>Welcome to 8 Ball!</ion-title>
+<ion-img width="250" height="190" position = "center" src="https://media2.giphy.com/media/3orifhNhn840GpMMPm/giphy.gif"></ion-img>
+
+<div  id="cool-button-div">
+<button ion-button (click)="updateStatus()">Click to Start</button>
+</div>
 </ion-content>
+
