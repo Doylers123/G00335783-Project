@@ -1,1 +1,25 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content">
+
+    <ion-content padding>
+<ion-title>Horror Bucket: Upcoming</ion-title>
+<div class="list">
+            <a class="item" href="#" onclick="window.open('http://www.vulture.com/2018/01/upcoming-new-horror-films-of-2018.html', '_blank', 'location=yes'); return false;">
+               <button ion-button>Upcoming Horror Movies</button>
+            </a>
+
+            <a class="item" href="#" onclick="window.open('http://ie.ign.com/articles/2017/09/08/29-scariest-upcoming-horror-games', '_system', 'location=yes'); return false;">
+               <button ion-button>Upcoming Horror Games</button>
+            </a>
+
+</div>
+
+    </ion-content>
+</ion-menu>
+
+
+
+
+
+
+
+<ion-nav [root]="rootPage" #content></ion-nav>

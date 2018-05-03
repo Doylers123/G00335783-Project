@@ -7,21 +7,25 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { EightballPage } from '../pages/eightball/eightball';
-import { SarcasticPage } from '../pages/sarcastic/sarcastic';
-import { NormalPage } from '../pages/normal/normal';
+import { MoviePage } from '../pages/sarcastic/sarcastic';
+import { GamePage } from '../pages/normal/normal';
+import { HttpClientModule } from '@angular/common/http';
 
 import {IonicStorageModule} from'@ionic/storage';
+import { GamesProvider } from '../providers/games/games';
+
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     EightballPage,
-    SarcasticPage,
-    NormalPage
+    MoviePage,
+    GamePage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
       ],
@@ -30,13 +34,15 @@ import {IonicStorageModule} from'@ionic/storage';
     MyApp,
     HomePage,
     EightballPage,
-    SarcasticPage,
-    NormalPage
+    MoviePage,
+    GamePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GamesProvider,
+   
   ]
 })
 export class AppModule {}

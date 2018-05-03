@@ -7,14 +7,57 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Mode Picked: </ion-title>
+    <ion-title>Horror Games</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<p>Welcome to Normal mode! The answers given here are like that of the classic version of 8 ball</p>
+<p>Welcome to the horror game section! below you can see my score for the movie and the ign score.</p>
 <p></p>
-<p>Ask a question and see what answer you get!</p>
+<p>Click the button below the image image bring up the imdb page</p>
+<div class="list">
+<h1>Dead Space 3</h1>
+<ion-img width="275" height="150" src="https://media.giphy.com/media/Jai8m3bVESN5m/source.gif"></ion-img>
+<a class="item" href="#" onclick="window.open('http://ie.ign.com/articles/2013/02/07/dead-space-3-review', '_blank', 'location=yes'); return false;">
+<button ion-button >IGN</button>
+</a>
+<a class="item" href="#" onclick="window.open('https://www.youtube.com/watch?v=0VfSMvg5wEg', '_blank', 'location=yes'); return false;">
+<button ion-button >Trailer</button>
+ </a>
+<p>My Score: 8.2/10</p>
+
+<h1>Outlast 2</h1>
+<ion-img width="275" height="125" src="https://giffiles.alphacoders.com/154/15499.gif"></ion-img>
+            <a class="item" href="#" onclick="window.open('http://ie.ign.com/articles/2017/04/24/outlast-2-review', '_blank', 'location=yes'); return false;">
+<button ion-button >IGN page</button>
+</a>
+<a class="item" href="#" onclick="window.open('https://www.youtube.com/watch?v=QTM2655BA6U', '_blank', 'location=yes'); return false;">
+<button ion-button >Trailer</button>
+ </a>
+<p>My Score: 8.7.2/10</p>
+
+<h1>The Evil Within 2</h1>
+<ion-img width="275" height="115" src="https://i.imgur.com/bNAxaPs.gif"></ion-img>
+            <a class="item" href="#" onclick="window.open('http://ie.ign.com/articles/2017/10/13/the-evil-within-2-review', '_blank', 'location=yes'); return false;">
+<button ion-button >IGN page</button>
+</a>
+<a class="item" href="#" onclick="window.open('https://www.youtube.com/watch?v=rEz5CnEPgps', '_blank', 'location=yes'); return false;">
+<button ion-button >Trailer</button>
+ </a>
+<p>My Score: 9.1/10</p>
+</div>
+
+<ion-list>
+   <!-- <button ion-button (click)="GetGameData()">Games</button>!-->
+<ion-item *ngFor="let games of normal">
+<p>{{games.name}}</p>
+<p>{{games.Rating}}</p>
+<p>{{games.Price}}</p>
+ </ion-item>
+</ion-list>
+
+
+
 </ion-content>

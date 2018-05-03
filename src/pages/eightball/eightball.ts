@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { SarcasticPage } from '../../pages/sarcastic/sarcastic';
-import { NormalPage } from '../../pages/normal/normal';
+import { MoviePage } from '../../pages/sarcastic/sarcastic';
+import { GamePage } from '../../pages/normal/normal';
 import {Storage} from'@ionic/storage';
 
 
@@ -20,7 +20,7 @@ saveStatus(){
 this.storage.set("myChoice", this.myChoice);
 //this.navCtrl.pop();
 //this.navCtrl.push(SarcasticPage);
-//this.navCtrl.push(NormalPage);
+this.navCtrl.push(GamePage);
 }
 
   ionViewDidLoad() {
@@ -34,11 +34,11 @@ this.storage.get("myChoice")
 this.myChoice = data;
 })
 }
-sarcasticPage(){
-this.navCtrl.push(SarcasticPage);
+horrorMovies(){
+this.navCtrl.push(MoviePage);
 }
 
-normalPage(){
-this.navCtrl.push(NormalPage);
+horrorGames(){
+this.navCtrl.push(GamePage);
 }
 }

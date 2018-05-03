@@ -5,7 +5,7 @@ import { NavController, NavParams } from 'ionic-angular';
   selector: 'page-sarcastic',
   templateUrl: 'sarcastic.html',
 })
-export class SarcasticPage {
+export class MoviePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -13,5 +13,9 @@ export class SarcasticPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SarcasticPage');
   }
+
+horrorMovie(){
+this.navCtrl.push(MoviePage);
+}
 
 }

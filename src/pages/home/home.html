@@ -1,18 +1,31 @@
 <ion-header>
 <ion-navbar>
 
-<ion-title>Magic 8 Ball</ion-title>
 
+<ion-title>Horror Bucket</ion-title>
+<ion-buttons left>
+    <button ion-button icon-only menuToggle>
+        <ion-icon name = "menu"></ion-icon>
+    </button>
+</ion-buttons>
 </ion-navbar>
 
 </ion-header>
 
 <ion-content padding class = "bg-image">
-    <ion-title>Welcome to 8 Ball!</ion-title>
-<ion-img width="250" height="190" position = "center" src="https://media2.giphy.com/media/3orifhNhn840GpMMPm/giphy.gif"></ion-img>
+
+    <ion-menu side="right" [content]="mycontent">...</ion-menu>
+
+    <ion-title>Welcome to the Horror Bucket!</ion-title>
+<ion-img width="300" height="140" src="https://lh6.googleusercontent.com/vyoe3matZ5IvlZIfQqvsKA1ghMLGuhH7Pi2-UBtQrY4gRyzxD2Sz-le5bDdPeuP95w4diCToY3MJiPq2KuXhzfE9N_25kAA4DdbBcl3lOCJwaVwKc8HR7v7YrnQ41fLSzUvpx4OU"></ion-img>
+
+<p>Welcome to the horror  bucket! Click below to choose from horror games to horror movies</p>
+<p></p>
 
 <div  id="cool-button-div">
-<button ion-button (click)="updateStatus()">Click to Start</button>
+<button ion-button (click)="updateStatus()">Click to Begin</button>
 </div>
+
+
 </ion-content>
 
