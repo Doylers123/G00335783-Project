@@ -1,0 +1,32 @@
+<!--
+  Generated template for the GameFavPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>GameFav</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list radio-group [(ngModel)]="myGameFav">
+<ion-item>
+<ion-label>Dead Space 3</ion-label>
+<ion-radio value="Dead Space 3"></ion-radio>
+</ion-item>
+<ion-item>
+<ion-label>Outlast 2</ion-label>
+<ion-radio value="Outlast"></ion-radio>
+</ion-item>
+<ion-item>
+<ion-label>The Evil Within 2</ion-label>
+<ion-radio value="The Evil Within 2"></ion-radio>
+</ion-item>
+<button ion-button (click)="saveGameFav()">Save</button>
+</ion-list>
+</ion-content>

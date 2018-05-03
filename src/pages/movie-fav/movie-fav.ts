@@ -18,6 +18,7 @@ export class MovieFavPage {
   
     saveMovieFav() {
       this.storage.set("myMovieFav", this.myMovieFav);
+      this.navCtrl.pop();
     }
   
 

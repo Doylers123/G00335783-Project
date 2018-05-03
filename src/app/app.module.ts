@@ -10,6 +10,7 @@ import { EightballPage } from '../pages/eightball/eightball';
 import { MoviePage } from '../pages/sarcastic/sarcastic';
 import { GamePage } from '../pages/normal/normal';
 import { MovieFavPage } from '../pages/movie-fav/movie-fav';
+import { GameFavPage } from '../pages/game-fav/game-fav';
 import { HttpClientModule } from '@angular/common/http';
 
 import {IonicStorageModule} from'@ionic/storage';
@@ -24,6 +25,7 @@ import { MoviesProvider } from '../providers/movies/movies';
     EightballPage,
     MoviePage,
     MovieFavPage,
+    GameFavPage,
     GamePage
   ],
   imports: [
@@ -39,6 +41,7 @@ import { MoviesProvider } from '../providers/movies/movies';
     EightballPage,
     MoviePage,
     MovieFavPage,
+    GameFavPage,
     GamePage
   ],
   providers: [
