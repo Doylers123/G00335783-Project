@@ -51,4 +51,13 @@
 <p>My Score: 9.1/10</p>
 
 </div>
+
+<ion-list>
+<ion-item *ngFor="let movies of sarcastic">
+<p>{{movies.name}}</p>
+<p>{{movies.Rating}}</p>
+<p>{{movies.Year}}</p>
+ </ion-item>
+</ion-list>
+
 </ion-content>

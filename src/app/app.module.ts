@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import {IonicStorageModule} from'@ionic/storage';
 import { GamesProvider } from '../providers/games/games';
+import { MoviesProvider } from '../providers/movies/movies';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { GamesProvider } from '../providers/games/games';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     GamesProvider,
+    MoviesProvider,
    
   ]
 })
