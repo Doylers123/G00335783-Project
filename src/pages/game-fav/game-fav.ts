@@ -13,25 +13,25 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'game-fav.html',
 })
 export class GameFavPage {
-myGameFav: string;
+  myGameFav: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad GameFavPage');
   }
-      saveGameFav() {
-      this.storage.set("myGameFav", this.myGameFav);
-      this.navCtrl.pop();
-    }
+  saveGameFav() {
+    this.storage.set("myGameFav", this.myGameFav);
+    this.navCtrl.pop();
+  }
 
-    ionViewWillEnter() {
+  ionViewWillEnter() {
     console.log("hello");
     this.storage.get("myGameFav")
       .then((data) => {
         this.myGameFav = data;
       });
 
-}
+  }
 }

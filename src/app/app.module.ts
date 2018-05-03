@@ -13,7 +13,7 @@ import { MovieFavPage } from '../pages/movie-fav/movie-fav';
 import { GameFavPage } from '../pages/game-fav/game-fav';
 import { HttpClientModule } from '@angular/common/http';
 
-import {IonicStorageModule} from'@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage';
 import { GamesProvider } from '../providers/games/games';
 import { MoviesProvider } from '../providers/movies/movies';
 
@@ -33,7 +33,7 @@ import { MoviesProvider } from '../providers/movies/movies';
     HttpClientModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
-      ],
+  ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
@@ -47,10 +47,10 @@ import { MoviesProvider } from '../providers/movies/movies';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
     GamesProvider,
     MoviesProvider,
-   
+
   ]
 })
-export class AppModule {}
+export class AppModule { }

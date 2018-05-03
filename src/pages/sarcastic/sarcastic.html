@@ -16,52 +16,53 @@
 
 <ion-content padding>
 
-<ion-title>Your Favourite Movie: {{myMovieFav}}</ion-title>
-<button ion-button (click)="updateMovieFav()">Pick Favourite Movie</button><!--Button to call Storage Method!-->
+  <ion-title>Your Favourite Movie: {{myMovieFav}}</ion-title>
+  <button ion-button (click)="updateMovieFav()">Pick Favourite Movie</button>
+  <!--Button to call Storage Method!-->
 
-<p>Welcome to the horror movie section! below you can see my score for the movie and the imdb score.</p>
-<p></p>
-<p>Click the button below the image image bring up the imdb page</p>
-<div class="list">
-<h1>Rec</h1>
-<ion-img width="250" height="135" src="https://www.wykop.pl/cdn/c3201142/comment_BkFkf9JBcfDeO7WLUF40h0RdyQXaMQ2B.gif"></ion-img>
-            <a class="item" href="#" onclick="window.open('https://www.imdb.com/title/tt1038988/', '_blank', 'location=yes'); return false;">
+  <p>Welcome to the Horror Movie section! Below you can see my score for the Movie and the IMDB score.</p>
+  <p></p>
+  <p>Click the button below the image to bring up the IMDB page or the Trailer</p>
+  <div class="list">
+    <h1>Rec</h1>
+    <ion-img width="250" height="135" src="https://www.wykop.pl/cdn/c3201142/comment_BkFkf9JBcfDeO7WLUF40h0RdyQXaMQ2B.gif"></ion-img>
+    <a class="item" href="#" onclick="window.open('https://www.imdb.com/title/tt1038988/', '_blank', 'location=yes'); return false;">
 <button ion-button >IMDB page</button>
 </a>
-<a class="item" href="#" onclick="window.open('https://www.youtube.com/watch?v=YGJ_jPKOj1c', '_blank', 'location=yes'); return false;">
+    <a class="item" href="#" onclick="window.open('https://www.youtube.com/watch?v=YGJ_jPKOj1c', '_blank', 'location=yes'); return false;">
 <button ion-button >Trailer</button>
  </a>
-<p>My Score: 8.2/10</p>
+    <p>My Score: 8.9/10</p>
 
-<h1>The Amityville Horror</h1>
-<ion-img width="250" height="150" src="http://whosunderthebed.com/wp-content/uploads/2016/09/Amityville-Horror2.gif"></ion-img>
+    <h1>The Amityville Horror</h1>
+    <ion-img width="250" height="150" src="http://whosunderthebed.com/wp-content/uploads/2016/09/Amityville-Horror2.gif"></ion-img>
 
-<a class="item" href="#" onclick="window.open('https://www.imdb.com/title/tt0384806/?ref_=nv_sr_1', '_blank', 'location=yes'); return false;">
+    <a class="item" href="#" onclick="window.open('https://www.imdb.com/title/tt0384806/?ref_=nv_sr_1', '_blank', 'location=yes'); return false;">
 <button ion-button >IMDB page</button>
  </a>
- <a class="item" href="#" onclick="window.open('https://www.youtube.com/watch?v=c5Maq9H1lZ8', '_blank', 'location=yes'); return false;">
+    <a class="item" href="#" onclick="window.open('https://www.youtube.com/watch?v=c5Maq9H1lZ8', '_blank', 'location=yes'); return false;">
 <button ion-button >Trailer</button>
  </a>
-<p>My Score: 8.7.2/10</p>
+    <p>My Score: 7.9/10</p>
 
-<h1>The Conjuring</h1>
-<ion-img width="300" height="165" src="https://media0.giphy.com/media/Rs1l1vxtZFI6Q/giphy.gif"></ion-img>
-<a class="item" href="#" onclick="window.open('https://www.imdb.com/title/tt1457767/', '_blank', 'location=yes'); return false;">
+    <h1>The Conjuring</h1>
+    <ion-img width="300" height="165" src="https://media0.giphy.com/media/Rs1l1vxtZFI6Q/giphy.gif"></ion-img>
+    <a class="item" href="#" onclick="window.open('https://www.imdb.com/title/tt1457767/', '_blank', 'location=yes'); return false;">
 <button ion-button >IMDB page</button>
  </a>
- <a class="item" href="#" onclick="window.open('https://www.youtube.com/watch?v=k10ETZ41q5o', '_blank', 'location=yes'); return false;">
+    <a class="item" href="#" onclick="window.open('https://www.youtube.com/watch?v=k10ETZ41q5o', '_blank', 'location=yes'); return false;">
 <button ion-button >Trailer</button>
  </a>
-<p>My Score: 9.1/10</p>
+    <p>My Score: 8.3/10</p>
 
-</div>
+  </div>
 
-<ion-list>
-<ion-item *ngFor="let movies of sarcastic">
-<p>{{movies.name}}</p>
-<p>{{movies.Rating}}</p>
-<p>{{movies.Year}}</p>
- </ion-item>
-</ion-list>
+  <ion-list>
+    <ion-item *ngFor="let movies of sarcastic">
+      <p>{{movies.name}}</p>
+      <p>{{movies.Rating}}</p>
+      <p>{{movies.Year}}</p>
+    </ion-item>
+  </ion-list>
 
 </ion-content>

@@ -13,20 +13,20 @@
 </ion-header>
 
 
-  <ion-content padding>
-<ion-list radio-group [(ngModel)]="myMovieFav">
-<ion-item>
-<ion-label>Rec</ion-label>
-<ion-radio value="REC"></ion-radio>
-</ion-item>
-<ion-item>
-<ion-label>The Amytiville Horror</ion-label>
-<ion-radio value="The Amytiville Horror"></ion-radio>
-</ion-item>
-<ion-item>
-<ion-label>The Conjuring</ion-label>
-<ion-radio value="The Conjuring"></ion-radio>
-</ion-item>
-<button ion-button (click)="saveMovieFav()">Save</button>
-</ion-list>
-  </ion-content>
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="myMovieFav">
+    <ion-item>
+      <ion-label>Rec</ion-label>
+      <ion-radio value="REC"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>The Amytiville Horror</ion-label>
+      <ion-radio value="The Amytiville Horror"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>The Conjuring</ion-label>
+      <ion-radio value="The Conjuring"></ion-radio>
+    </ion-item>
+    <button ion-button (click)="saveMovieFav()">Save</button>
+  </ion-list>
+</ion-content>

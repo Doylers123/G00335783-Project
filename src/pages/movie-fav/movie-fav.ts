@@ -15,21 +15,21 @@ export class MovieFavPage {
     console.log("hello");
   }
 
-  
-    saveMovieFav() {
-      this.storage.set("myMovieFav", this.myMovieFav);
-      this.navCtrl.pop();
-    }
-  
+
+  saveMovieFav() {
+    this.storage.set("myMovieFav", this.myMovieFav);
+    this.navCtrl.pop();
+  }
+
 
   ionViewWillEnter() {
     console.log("hello");
 
-    
+
     this.storage.get("myMovieFav")
       .then((data) => {
         this.myMovieFav = data;
       });
-      
+
   }
 }
