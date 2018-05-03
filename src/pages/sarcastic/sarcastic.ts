@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { MoviesProvider } from '../../providers/movies/movies';
 import { Observable } from 'rxjs/Observable';
+import {Storage} from '@ionic/storage';
+import { MovieFavPage } from '../../pages/movie-fav/movie-fav';
 
 @Component({
   selector: 'page-sarcastic',
@@ -9,7 +11,8 @@ import { Observable } from 'rxjs/Observable';
 })
 export class MoviePage {
 sarcastic:Observable<any>;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private mp:MoviesProvider) {
+myMovieFav: string;
+  constructor(public navCtrl: NavController, public navParams: NavParams,private storage:Storage, private mp:MoviesProvider) {
   }
 
   ionViewDidLoad() {
@@ -19,6 +22,22 @@ sarcastic:Observable<any>;
     this.sarcastic = data.movies;
 })
   }
+
+updateMovieFav(){
+  
+this.navCtrl.push(MovieFavPage);
+}
+
+ionViewWillEnter(){
+this.storage.get("myMovieFav")
+.then((data) =>
+{
+this.myMovieFav = data;
+})
+.catch((err) => {
+alert("Error accesssing Storage")
+})
+}
 
 horrorMovie(){
 this.navCtrl.push(MoviePage);
